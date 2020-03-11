@@ -12,4 +12,4 @@ SELECT
     a.EmployeeId=b.ReportsTo
   GROUP BY 
     SupervisorName
-    ORDER BY SupervisorId
+  ORDER BY SupervisorId
