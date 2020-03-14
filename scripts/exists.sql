@@ -3,6 +3,6 @@
 */
 SELECT Name FROM Track
 	WHERE EXISTS(
-		SELECT InvoiceId FROM InvoiceLine
+		SELECT NULL FROM InvoiceLine -- Using NULL to signify that we just want to get boolean, no the results
 		WHERE Track.TrackId = InvoiceLine.TrackId 
 		AND InvoiceLine.UnitPrice > 2);
