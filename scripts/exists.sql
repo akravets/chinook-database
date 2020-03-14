@@ -4,7 +4,5 @@
 SELECT Name FROM Track
 	WHERE EXISTS(
 		SELECT InvoiceId FROM InvoiceLine
-		WHERE
-			Track.TrackId = InvoiceLine.TrackId
-		AND
-			InvoiceLine.UnitPrice > 2);
+		WHERE Track.TrackId = InvoiceLine.TrackId 
+		AND InvoiceLine.UnitPrice > 2);
